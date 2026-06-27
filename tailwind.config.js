@@ -1,14 +1,7 @@
-import daisyui from "daisyui";
-
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
-
   theme: {
     extend: {
       colors: {
@@ -26,16 +19,13 @@ export default {
         accent: "#10b981",
         dark: "#0f172a",
       },
-
       fontFamily: {
         sans: ["Inter", "sans-serif"],
         display: ["Poppins", "sans-serif"],
       },
     },
   },
-
-  plugins: [daisyui],
-
+  plugins: [require("daisyui")],
   daisyui: {
     themes: [
       {
@@ -52,8 +42,6 @@ export default {
           warning: "#fbbd23",
           error: "#f87272",
         },
-      },
-      {
         resellhub_dark: {
           primary: "#0ea5e9",
           secondary: "#f59e0b",
@@ -69,7 +57,6 @@ export default {
         },
       },
     ],
-
-    darkTheme: "resellhub_dark",
+    defaultTheme: "resellhub",
   },
 };
